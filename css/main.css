@@ -2275,7 +2275,7 @@ html.no-csstransitions .home-content__main {
  .s-sservices {
     padding-top: 16.2rem;
     padding-bottom: 9rem;
-    background-color: #FF2D2D;
+    background-color: #39B54A;
     color: #010507;
     position: relative;
 }
@@ -2293,7 +2293,7 @@ html.no-csstransitions .home-content__main {
 
 /* ------------------------------------------------------------------- 
  * responsive:
- * about
+ * sservices
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
     .sservices-desc {
