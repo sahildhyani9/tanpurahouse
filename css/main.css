@@ -2268,20 +2268,43 @@ html.no-csstransitions .home-content__main {
 }
 
 
+/* ===================================================================
+ * # sservices
+ *
+ * ------------------------------------------------------------------- */
+ .s-sservices {
+    padding-top: 16.2rem;
+    padding-bottom: 9rem;
+    background-color: #FF2D2D;
+    color: #010507;
+    position: relative;
+}
+
+.s-sservices .section-header.has-bottom-sep::before {
+    background-color: rgba(255, 255, 255, 0.25);
+}
+
+.sservices-desc {
+    font-size: 2.4rem;
+    line-height: 1.75;
+    text-align: center;
+    max-width: 1024px;
+}
+
 /* ------------------------------------------------------------------- 
  * responsive:
  * about
  * ------------------------------------------------------------------- */
 @media only screen and (max-width: 1200px) {
-    .about-desc {
+    .sservices-desc {
         font-size: 2.2rem;
         max-width: 940px;
     }
-    .about-stats {
+    .sservices-stats {
         padding-top: 3rem;
         padding-bottom: 3.9rem;
     }
-    .about-stats {
+    .sservices-stats {
         max-width: 800px;
     }
     .stats__col {
@@ -2296,7 +2319,7 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 800px) {
-    .about-desc {
+    .sservices-desc {
         font-size: 2rem;
         max-width: 600px;
     }
@@ -2309,19 +2332,19 @@ html.no-csstransitions .home-content__main {
 }
 
 @media only screen and (max-width: 700px) {
-    .about__line {
+    .sservices__line {
         right: 5.5rem;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    .s-about {
+    .s-sservices {
         padding-top: 12rem;
     }
-    .about-desc {
+    .sservices-desc {
         font-size: 1.9rem;
     }
-    .about-stats {
+    .sservices-stats {
         padding-top: 0;
     }
     .stats__col {
@@ -2347,13 +2370,13 @@ html.no-csstransitions .home-content__main {
     .stats__col:nth-child(n) {
         border: none;
     }
-    .about__line {
+    .sservices__line {
         height: 7.2rem;
     }
 }
 
 @media only screen and (max-width: 400px) {
-    .about-desc {
+    .sservices-desc {
         font-size: 1.8rem;
     }
     .stats__count {
