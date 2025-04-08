@@ -3098,6 +3098,33 @@ html.no-csstransitions .home-content__main {
     top: -10.2rem;
     margin-left: -1px;
 }
+.accordion {
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    padding: 1rem;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1.25rem;
+    transition: 0.4s;
+    border-bottom: 1px solid #444;
+}
+
+.accordion:hover,
+.accordion.active {
+    color: #ffd700;
+}
+
+.panel {
+    padding: 0 1rem;
+    background-color: transparent;
+    color: #dcdcdc;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
 
 
 
