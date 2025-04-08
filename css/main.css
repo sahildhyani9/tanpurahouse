@@ -2953,6 +2953,8 @@ html.no-csstransitions .home-content__main {
  * ------------------------------------------------------------------- */
 .faq-item {
     margin-bottom: 2rem;
+    padding-top: 15rem;
+    padding-bottom: 12rem;
 }
 
 .faq-question {
