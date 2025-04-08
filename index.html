@@ -663,40 +663,44 @@
     </section> <!-- end s-clients -->
 
 
-<xxxxxxxxxxxxx>
-    import React, { Component } from 'react';
-import Faq from 'react-faq-component';
+<!-- faq
+================================================== -->
+<section id="faq" class="s-faq">
 
-const data = {
-  title: "FAQ (How it works)",
-  rows: [
-    {
-      title: "Lorem ipsum dolor sit amet,",
-      content: "Lorem ipsum dolor sit amet, consectetur "
-    },
-    {
-      title: "Nunc maximus, magna at ultricies elementum",
-      content: "Nunc maximus, magna at ultricies elementum, risus turpis vulputate quam."
-    },
-    {
-      title: "Curabitur laoreet, mauris vel blandit fringilla",
-      content: "Curabitur laoreet, mauris vel blandit fringilla, leo elit rhoncus nunc"
-    },
-    {
-      title: "What is the package version",
-      content: "v1.0.5"
-    }]
-}
+    <div class="row section-header has-bottom-sep" data-aos="fade-up">
+        <div class="col-full">
+            <h3 class="subhead subhead--dark">FAQs</h3>
+            <h1 class="display-1 display-1--light">Frequently Asked Questions</h1>
+        </div>
+    </div>
 
-export default class App extends Component {
-  render() {
-    return (
-      <div>
-        <Faq data={data}/>
-      </div>
-    )
-  }
-}
+    <div class="row faq-content" data-aos="fade-up">
+        <div class="col-full">
+
+            <div class="faq-item">
+                <h4 class="faq-question">What are the class options available?</h4>
+                <p class="faq-answer">You can choose from individual sessions or small group classes (up to 5 students). The schedule is flexible based on your level.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4 class="faq-question">How are the fees structured?</h4>
+                <p class="faq-answer">Fees vary between individual and group classes. Please refer to the profile or contact directly for the detailed fee structure.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4 class="faq-question">How often should I attend classes?</h4>
+                <p class="faq-answer">Beginners are recommended 2-3 sessions per week. Intermediate and advanced students can choose 1-2 based on their needs.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4 class="faq-question">Are there any special or bonus classes?</h4>
+                <p class="faq-answer">Yes! Special classes are announced occasionally, focused on specific Raags or Taal. They are free and open to enrolled students.</p>
+            </div>
+
+        </div>
+    </div>
+
+</section>
 
 
     <!-- contact

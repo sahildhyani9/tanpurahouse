@@ -2947,6 +2947,27 @@ html.no-csstransitions .home-content__main {
     }
 }
 
+/* ===================================================================
+ * # FAQ
+ *
+ * ------------------------------------------------------------------- */
+.faq-item {
+    margin-bottom: 2rem;
+}
+
+.faq-question {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #ffffff; /* or change based on your theme */
+}
+
+.faq-answer {
+    font-size: 1rem;
+    color: #dcdcdc;
+    margin-top: 0.5rem;
+}
+
+
 
 
 /* ===================================================================
