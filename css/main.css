@@ -3098,43 +3098,45 @@ html.no-csstransitions .home-content__main {
     top: -10.2rem;
     margin-left: -1px;
 }
-.accordion {
-    background-color: transparent;
-    color: #fff;
+.faq-accordion .accordion-btn {
+    background: none;
+    color: white;
     cursor: pointer;
     padding: 1rem;
     width: 100%;
-    text-align: left;
     border: none;
-    outline: none;
-    font-size: 1.25rem;
-    transition: 0.4s;
     border-bottom: 1px solid #444;
+    text-align: left;
+    font-size: 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.accordion:hover,
-.accordion.active {
+    transition: all 0.3s ease;
+  }
+  
+  .faq-accordion .accordion-btn:hover {
     color: #ffd700;
-}
-
-.accordion .icon {
+  }
+  
+  .faq-accordion .icon {
     font-size: 1.5rem;
-    margin-left: 1rem;
-    transition: transform 0.3s;
-    color: #fff;
-}
-
-.panel {
-    padding: 0 1rem;
-    background-color: transparent;
-    color: #dcdcdc;
+    color: white;
+    transition: transform 0.3s ease;
+  }
+  
+  .panel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease-out;
-}
+    transition: max-height 0.4s ease;
+    background: transparent;
+    color: #ccc;
+    padding: 0 1rem;
+  }
+  
+  .panel.open {
+    max-height: 200px; /* adjust as needed */
+    padding: 1rem;
+  }
 
 
 
