@@ -735,65 +735,68 @@
 
 <!-- faq
 ================================================== -->
-<section id="faq" class="s-faq">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
 
-    <div class="row section-header has-bottom-sep" data-aos="fade-up">
-      <div class="col-full">
-        <h3 class="subhead subhead--dark">FAQs</h3>
-        <h1 class="display-1 display-1--light">Frequently Asked Questions</h1>
-      </div>
-    </div>
-  
-    <div class="row faq-content" data-aos="fade-up">
-      <div class="col-full">
-  
-        <div class="faq-accordion">
-  
-          <div class="faq-item">
-            <button class="accordion-btn">
-              <span class="icon">+</span>
-              What are the class options available?
-            </button>
-            <div class="panel">
-              <p>You can choose from individual sessions or small group classes (up to 5 students). The schedule is flexible based on your level.</p>
-            </div>
-          </div>
-  
-          <div class="faq-item">
-            <button class="accordion-btn">
-              <span class="icon">+</span>
-              How are the fees structured?
-            </button>
-            <div class="panel">
-              <p>Fees vary between individual and group classes. Please refer to the profile or contact directly for the detailed fee structure.</p>
-            </div>
-          </div>
-  
-          <div class="faq-item">
-            <button class="accordion-btn">
-              <span class="icon">+</span>
-              How often should I attend classes?
-            </button>
-            <div class="panel">
-              <p>Beginners are recommended 2-3 sessions per week. Intermediate and advanced students can choose 1-2 based on their needs.</p>
-            </div>
-          </div>
-  
-          <div class="faq-item">
-            <button class="accordion-btn">
-              <span class="icon">+</span>
-              Are there any special or bonus classes?
-            </button>
-            <div class="panel">
-              <p>Yes! Special classes are announced occasionally, focused on specific Raags or Taal. They are free and open to enrolled students.</p>
-            </div>
-          </div>
-  
-        </div>
-  
-      </div>
-    </div>
-  </section>
+.active, .accordion:hover {
+  background-color: #ccc; 
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+</style>
+</head>
+<body>
+
+<h2>Accordion</h2>
+
+<button class="accordion">Section 1</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 2</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<button class="accordion">Section 3</button>
+<div class="panel">
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+</div>
+
+<script>
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
 
 
     <!-- contact
