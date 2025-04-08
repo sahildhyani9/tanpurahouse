@@ -2951,7 +2951,13 @@ html.no-csstransitions .home-content__main {
  * # FAQ
  *
  * ------------------------------------------------------------------- */
-.faq-item {
+ .s-faq {
+        padding-top: 15rem;
+    padding-bottom: 12rem;
+      position: relative;
+}
+
+ .faq-item {
     margin-bottom: 2rem;
 }
 
