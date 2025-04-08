@@ -3110,11 +3110,21 @@ html.no-csstransitions .home-content__main {
     font-size: 1.25rem;
     transition: 0.4s;
     border-bottom: 1px solid #444;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .accordion:hover,
 .accordion.active {
     color: #ffd700;
+}
+
+.accordion .icon {
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    transition: transform 0.3s;
+    color: #fff;
 }
 
 .panel {
