@@ -1819,10 +1819,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     text-align: left;
 }
 
-.home-service__buttons {
-    padding-top: 6rem;
-    text-align: left;
-}
+
 
 .home-content__buttons .btn {
     width: 215px;
@@ -1834,23 +1831,11 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     transition: all 0.5s ease-in-out;
 }
 
-.home-service__buttons .btn {
-    width: 215px;
-    border-color: #FF2D2D;
-    color: #FF2D2D;
-    margin: 1.5rem 1.5rem 0 0;
-    letter-spacing: .25rem;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
-}
 
 .home-content__buttons .btn:last-child {
     margin-right: 0;
 }
 
-.home-service__buttons .btn:last-child {
-    margin-right: 0;
-}
 
 .home-content__buttons .btn:hover, 
 .home-content__buttons .btn:focus {
@@ -1858,11 +1843,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: #000000;
 }
 
-.home-service__buttons .btn:hover, 
-.home-service__buttons .btn:focus {
-    background: #FF2D2D !important;
-    color: #000000;
-}
+
 
 .home-content__scroll {
     position: absolute;
@@ -2457,6 +2438,30 @@ html.no-csstransitions .home-content__main {
     margin-top: -.6rem;
 }
 
+.services-service__buttons {
+    padding-top: 6rem;
+    text-align: left;
+}
+
+.services-service__buttons .btn {
+    width: 215px;
+    border-color: #FF2D2D;
+    color: #FF2D2D;
+    margin: 1.5rem 1.5rem 0 0;
+    letter-spacing: .25rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.services-service__buttons .btn:last-child {
+    margin-right: 0;
+}
+
+.services-service__buttons .btn:hover, 
+.services-service__buttons .btn:focus {
+    background: #FF2D2D !important;
+    color: #000000;
+}
 
 /* ------------------------------------------------------------------- 
  * responsive:
