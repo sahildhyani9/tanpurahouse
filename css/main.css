@@ -1819,7 +1819,22 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     text-align: left;
 }
 
+.home-service__buttons {
+    padding-top: 6rem;
+    text-align: left;
+}
+
 .home-content__buttons .btn {
+    width: 215px;
+    border-color: #FFFFFF;
+    color: #FFFFFF;
+    margin: 1.5rem 1.5rem 0 0;
+    letter-spacing: .25rem;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.home-service__buttons .btn {
     width: 215px;
     border-color: #FFFFFF;
     color: #FFFFFF;
@@ -1833,8 +1848,18 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     margin-right: 0;
 }
 
+.home-service__buttons .btn:last-child {
+    margin-right: 0;
+}
+
 .home-content__buttons .btn:hover, 
 .home-content__buttons .btn:focus {
+    background: #FFFFFF !important;
+    color: #000000;
+}
+
+.home-service__buttons .btn:hover, 
+.home-service__buttons .btn:focus {
     background: #FFFFFF !important;
     color: #000000;
 }
