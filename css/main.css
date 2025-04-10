@@ -1836,8 +1836,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .home-service__buttons .btn {
     width: 215px;
-    border-color: #FFFFFF;
-    color: #FFFFFF;
+    border-color: #FF2D2D;
+    color: #FF2D2D;
     margin: 1.5rem 1.5rem 0 0;
     letter-spacing: .25rem;
     -webkit-transition: all 0.5s ease-in-out;
@@ -1860,7 +1860,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 
 .home-service__buttons .btn:hover, 
 .home-service__buttons .btn:focus {
-    background: #FFFFFF !important;
+    background: #FF2D2D !important;
     color: #000000;
 }
 
