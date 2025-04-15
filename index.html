@@ -64,7 +64,7 @@
                     <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
                 </ul>
     
-                <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href='#0'>voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
+                <p><b>Preserving Tradition, Inspiring Expression –</b> Your Journey in Indian Music Begins Here Today</p>
     
                 <ul class="header-nav__social">
                     <li>
@@ -148,10 +148,10 @@
                 <a href="https://www.instagram.com/tanpurahouse/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i><span>Instagram</span></a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/pavi-gaur-83a9951b3/"><i class="fa fa-linkedin" aria-hidden="true"></i><span>linkedin</span></a>
+                <a href="https://www.linkedin.com/in/pavi-gaur-83a9951b3/"><i class="fa fa-linkedin" aria-hidden="true"></i><span>LinkedIn</span></a>
             </li>
             <li>
-                <a href="https://youtube.com/@tanpurahouse?si=L_wSkHrO8Je0f59u"><i class="fa fa-youtube" aria-hidden="true"></i><span>fa-youtube</span></a>
+                <a href="https://youtube.com/@tanpurahouse?si=L_wSkHrO8Je0f59u"><i class="fa fa-youtube" aria-hidden="true"></i><span>YouTube</span></a>
             </li>
         </ul> 
         <!-- end home-social -->
@@ -1010,6 +1010,36 @@
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const accordions = document.querySelectorAll(".accordion-btn");
+      
+          accordions.forEach(button => {
+            button.addEventListener("click", function () {
+              const panel = this.nextElementSibling;
+              const icon = this.querySelector(".icon");
+      
+              // Collapse all other panels
+              document.querySelectorAll(".panel").forEach(p => {
+                if (p !== panel) {
+                  p.style.maxHeight = null;
+                  p.previousElementSibling.querySelector(".icon").textContent = "+";
+                }
+              });
+      
+              // Toggle current panel
+              if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+                icon.textContent = "+";
+              } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+                icon.textContent = "−";
+              }
+            });
+          });
+        });
+      </script>
+      
 
 </body>
 
