@@ -2396,8 +2396,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-services {
-    padding-top: 16.2rem;
-    padding-bottom: 13.2rem;
+    padding-top: 10.2rem;
+    padding-bottom: 9rem;
     background-color: #FFFFFF;
     color: #757575;
     position: relative;
@@ -2551,7 +2551,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .s-works .intro-wrap {
-    padding: 15rem 0 25.2rem;
+    padding: 10.2rem 0 9rem;
     background: #111111;
 }
 
@@ -2782,8 +2782,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
 .s-clients {
-    padding-top: 16.2rem;
-    padding-bottom: 16.8rem;
+    padding-top: 10.2rem;
+    padding-bottom: 9rem;
     background-color: #e6e6e6;
     color: #757575;
     position: relative;
@@ -2982,8 +2982,8 @@ html.no-csstransitions .home-content__main {
  *
  * ------------------------------------------------------------------- */
  .s-faq {
-        padding-top: 15rem;
-    padding-bottom: 12rem;
+        padding-top: 10.2rem;
+    padding-bottom: 9rem;
       position: relative;
 }
 
@@ -3039,8 +3039,8 @@ html.no-csstransitions .home-content__main {
     background-image: url("../images/contact-bg.jpg");
     background-repeat: no-repeat;
     background-position: center, center;
-    padding-top: 15rem;
-    padding-bottom: 12rem;
+    padding-top: 10.2rem;
+    padding-bottom: 9rem;
     color: rgba(255, 255, 255, 0.5);
     position: relative;
 }
