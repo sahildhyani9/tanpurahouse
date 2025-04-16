@@ -3094,11 +3094,11 @@ html.no-csstransitions .home-content__main {
 .contact__line {
     display: block;
     width: 2px;
-    height: 10.4rem;
+    height: 14.4rem;
     background-color: #39b54a;
     position: absolute;
     left: 50%;
-    top: -10.2rem;
+    top: -9.2rem;
     margin-left: -1px;
 }
 
