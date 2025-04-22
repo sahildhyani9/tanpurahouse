@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Residency Page</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f7f7;
+      margin: 0;
+      padding: 2rem;
+      color: #333;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 2rem;
+    }
+
+    .image-column {
+      flex: 1;
+      min-width: 300px;
+      position: relative;
+      height: 600px;
+    }
+
+    .image-column img {
+      width: 80%;
+      border-radius: 1rem;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+      object-fit: cover;
+      position: absolute;
+      transition: transform 0.3s;
+    }
+
+    .image-column img:nth-child(1) {
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    .image-column img:nth-child(2) {
+      top: 200px;
+      left: 50px;
+      z-index: 2;
+    }
+
+    .image-column img:nth-child(3) {
+      top: 400px;
+      left: 0;
+      z-index: 3;
+    }
+
+    .image-column img:nth-child(4) {
+      top: 600px;
+      left: 50px;
+      z-index: 4;
+    }
+    .image-column img:nth-child(5) {
+      top: 800px;
+      left: 0;
+      z-index: 5;
+    }
+
+    .image-column img:hover {
+      transform: scale(1.03);
+    }
+
+    .content-column {
+      flex: 2;
+      min-width: 320px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      padding: 2rem;
+    }
+
+    h1 {
+      font-family: 'Georgia', serif;
+      font-size: 2rem;
+      margin-top: 0;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    ul li::marker {
+      color: #4e4eff;
+    }
+
+    .subsection {
+      margin-top: 1.5rem;
+    }
+
+    .fee-card {
+      font-size: 1rem;
+      background: #fff;
+      border-radius: 1rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      padding: 1.5rem 2rem;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .image-column {
+        height: 500px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Image Section with Overlap -->
+    <div class="image-column">
+      <img src="images/portfolio/IMG_0828.JPG" alt="Classroom Image" />
+      <img src="images/portfolio/IMG_0866.jpg" alt="Instructor Singing" />
+      <img src="images/portfolio/IMG_0869.jpg" alt="Instrument Close-up" />
+      <img src="images/portfolio/IMG_3877.jpg" alt="Instrument Close-up" />
+      <img src="images/portfolio/IMG_3879.jpg" alt="Instrument Close-up" />
+    </div>
+
+    <!-- Content Section -->
+    <div class="content-column">
+      <div class="card">
+        <h1>Residency</h1>
+
+        <div class="subsection">
+          <h3>✔ Duration of Stay:</h3>
+          <ul>
+            <li>Minimum Stay: 7 days</li>
+            <li>Maximum Stay: 30 days</li>
+            <li>You may choose your duration between 7 to 30 days based on your availability and learning goals.</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>✔ Facilities Provided:</h3>
+          <p>We aim to make your stay comfortable and focused on learning. The following amenities are included:</p>
+          <ul>
+            <li>A bed with clean bedsheets and pillows</li>
+            <li>Electricity and WiFi</li>
+            <li>Study table and chair</li>
+            <li>Dedicated space for daily riyaaz (practice)</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>✔ Food Arrangements:</h3>
+          <ul>
+            <li>Vegetarian meals will be provided daily.</li>
+            <li>Students preferring non-veg or other food may cook or order for themselves.</li>
+            <li>Children attending the residency will be served cooked food.</li>
+            <li>Adult students are encouraged to use the available kitchen space for simple meals.</li>
+          </ul>
+        </div>
+
+        <div class="subsection">
+          <h3>✔ Residency Guidelines:</h3>
+          <ul>
+            <li>Wake-up time is 5:00 A.M. followed by guided riyaaz</li>
+            <li>Maintain cleanliness of your room</li>
+            <li>No alcohol consumption allowed</li>
+            <li>Lights out by 9:30 P.M.</li>
+            <li>Daily cleaning participation is encouraged (e.g., mopping, watering plants, dishwashing, etc.)</li>
+            <li>Other activities like yoga, gym are not provided but can be self-arranged</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="fee-card">
+        <h2>Residency Fee</h2>
+        <ul>
+          <li>7-Day Stay: ₹6,500</li>
+          <li>30-Day Stay: ₹25,000</li>
+          <li>Per Day: ₹1,000</li>
+        </ul>
+        <p><strong>Security Deposit:</strong> ₹3,000 (Refundable upon successful completion of stay. Deductions may apply for any damages.)</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

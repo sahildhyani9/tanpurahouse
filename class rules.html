@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Rules</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom, #d2edff 50%, #01425c 50%);
+      color: #000;
+    }
+
+    .wrapper {
+      max-width: 900px;
+      margin: 30px auto;
+      background: white;
+      border-radius: 25px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: row;
+    }
+
+    .left, .right {
+      padding: 30px 25px;
+      flex: 1;
+    }
+
+    .left {
+      background-color: #d2edff;
+      border-right: 2px solid #c4e3f8;
+    }
+
+    .right {
+      background-color: #01425c;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    h2 {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: 20px;
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 30px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .note {
+      font-style: italic;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .circle-img {
+      width: 270px;
+      height: 270px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 30px;
+      border: 4px solid white;
+    }
+
+    .circle-img img,
+    .round-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .round-img {
+      width: 270px;
+      height: 190px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 0 auto 15px;
+      border: 4px solid white;
+    }
+
+    .square-img {
+      width: 270px;
+      height: 500px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 0 auto 15px;
+      border: 4px solid white;
+    }
+
+    .square-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }   
+
+    .feedback {
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .feedback-icons {
+      font-size: 24px;
+      margin-top: 10px;
+    }
+
+    .feedback-icons span {
+      margin: 0 10px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .wrapper {
+        flex-direction: column;
+      }
+      .circle-img, .round-img {
+        margin-bottom: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="left">
+      <h2>Online Class Rules</h2>
+      <ul>
+        <li><strong>Rescheduling Limit:</strong> Maximum 2 classes per month for both student and teacher.</li>
+        <li><strong>Validity for Rescheduling:</strong> Rescheduled classes must be completed within the same month. Delayed make-up will not hold.</li>
+        <li><strong>Vacation/Gaps:</strong> For breaks lasting 2 weeks or more, students must notify the teacher at least 4–7 days in advance.</li>
+        <li><strong>Notice for Rescheduling:</strong> Any class reschedule must be requested at least 24 hours prior. 
+            Last-minute cancellations will be counted as a conducted class.</li>
+        <li><strong>Emergency Cancellations:</strong> Only genuine medical emergencies will be rescheduled.</li>
+        <li><strong>Fee Submission:</strong> Fees must be paid in advance by the 5th of each month.</li>
+        <li><strong>Class Package:</strong> Students are required to pay in advance for the slot(10 classes) each month.</li>
+        <li><strong>Monthly Recording:</strong> Students must submit at least one practice recording per month to track progress.</li>
+        <li><strong>Missed Class by Teacher:</strong> If the teacher misses a class without prior notice, they will reschedule 
+            the missed session and waive the fee for one class in the following month.</li>
+        <li><strong>Missed Class by Student:</strong> If the student misses a class without notice, it will be considered a completed session.</li>
+      </ul>
+      <style>
+        
+        .custom-hr {
+          border: none;
+          height: 2px;
+          background-color: #333;
+          width: 60%;           /* Optional: controls the length of the line */
+          margin: 40px auto;    /* Centers the line and adds vertical spacing */
+        }
+      </style>
+       <hr class="custom-hr">
+
+
+      <h2>Offline Class Rules</h2>
+      <ul>
+        <li><strong>Monthly Commitment:</strong> Offline classes are structured on a monthly/class basis.</li>
+        <li><strong>Advance Payment:</strong> Fees are to be paid in advance every month.</li>
+        <li><strong>No Rescheduling:</strong> Missed offline classes will not be rescheduled, even in the case of teacher holidays (except Saturday and Sunday).</li>
+        <li><strong>Consistent Fees:</strong> Fees remain fixed whether the student attends 3, 5, or 4 days a week.</li>
+        <li><strong>Leave Notification:</strong> Students must inform the teacher in advance if they plan to be absent for any occasion.</li>
+      </ul>
+
+      <div class="round-img">
+        <img src="images/portfolio/IMG_0828.JPG" alt="Singers" />
+      </div>
+    </div>
+    <div class="right">
+      <div>
+        <div class="circle-img">
+          <img src="images/portfolio/IMG_3879.jpg" alt="Tanpura" />
+        </div>
+        <h2>Fee Revision Policy</h2>
+        <p class="note">(Applicable to both Online & Offline Students)</p>
+        <ul>
+          <li>After completing full 1 year, fees will increase slightly for the next 3 consecutive years.</li>
+          <li>No increase will be made for the following 2 years.</li>
+          <li>Fee structure will be the same unless a new increase again in the fifth year, and so on.</li>
+        </ul>
+        <br><br>
+        <div class="round-img">
+          <img src="images/portfolio/IMG_3877.jpg" alt="Audience" />
+        </div>
+
+        <br><br>
+        <div class="square-img">
+            <img src="images/portfolio/tambura-4952939.jpg" alt="Audience" />
+          </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
