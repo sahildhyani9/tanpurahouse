@@ -9,7 +9,7 @@
     
     var cfg = {
         scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : 'https://facebook.us8.list-manage.com/subscribe/post?u=cdb7b577e41181934ed6a6a44&amp;id=e6957d85dc'   // mailchimp url
+        mailChimpURL   : 'https://formspree.io/f/mkgrnnav'   // mailchimp url
     },
 
     $WIN = $(window);
@@ -323,58 +323,53 @@
     };
 
 
-   /* Contact Form
+    /* Contact Form
     * ------------------------------------------------------ */
-    var clContactForm = function() {
-        
-        /* local validation */
-        $('#contactForm').validate({
-        
-            /* submit via ajax */
-            submitHandler: function(form) {
+    var clContactForm = function () {
+        const form = document.getElementById("contactForm");
+        const loader = document.querySelector(".submit-loader");
+        const successMsg = document.querySelector(".message-success");
+        const errorMsg = document.querySelector(".message-warning");
     
-                var sLoader = $('.submit-loader');
+        if (!form) return;
     
-                $.ajax({
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            loader.style.display = "block";
+            errorMsg.style.display = "none";
+            successMsg.style.display = "none";
     
-                    type: "POST",
-                    url: "inc/sendEmail.php",
-                    data: $(form).serialize(),
-                    beforeSend: function() { 
+            const formData = new FormData(form);
     
-                        sLoader.slideDown("slow");
-    
-                    },
-                    success: function(msg) {
-    
-                        // Message was sent
-                        if (msg == 'OK') {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').fadeOut();
-                            $('#contactForm').fadeOut();
-                            $('.message-success').fadeIn();
-                        }
-                        // There was an error
-                        else {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').html(msg);
-                            $('.message-warning').slideDown("slow");
-                        }
-    
-                    },
-                    error: function() {
-    
-                        sLoader.slideUp("slow"); 
-                        $('.message-warning').html("Something went wrong. Please try again.");
-                        $('.message-warning').slideDown("slow");
-    
+            fetch("https://formspree.io/f/mkgrnnav", {
+                method: "POST",
+                body: formData,
+                headers: {
+                    Accept: "application/json",
+                },
+            })
+                .then(function (response) {
+                    loader.style.display = "none";
+                    if (response.ok) {
+                        form.style.display = "none";
+                        successMsg.style.display = "block";
+                    } else {
+                        return response.json().then(function (data) {
+                            errorMsg.textContent = data.errors
+                                ? data.errors[0].message
+                                : "There was an issue. Please try again.";
+                            errorMsg.style.display = "block";
+                        });
                     }
-    
+                })
+                .catch(function () {
+                    loader.style.display = "none";
+                    errorMsg.textContent = "Something went wrong. Please try again.";
+                    errorMsg.style.display = "block";
                 });
-            }
-    
         });
     };
+    
 
 
    /* Animate On Scroll
@@ -395,7 +390,7 @@
 
    /* AjaxChimp
     * ------------------------------------------------------ */
-    var clAjaxChimp = function() {
+  /*  var clAjaxChimp = function() {
         
         $('#mc-form').ajaxChimp({
             language: 'es',
@@ -423,7 +418,7 @@
             5: '<i class="fa fa-warning"></i> E-mail address is not valid.'
         } 
 
-    };
+    };*/
 
 
    /* Back to Top
