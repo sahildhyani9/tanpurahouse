@@ -2351,6 +2351,36 @@ html.no-csstransitions .home-content__main {
     background-color: #388E3C;
     color: white; /* ✅ This fixes it */
   }
+  /* -----------------------------------
+ * Responsive Design for Mobile
+ * ----------------------------------- */
+@media screen and (max-width: 768px) {
+    .card-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card p,
+    .card ul {
+        font-size: 1.3rem;
+    }
+
+    .download-btn {
+        width: 100%;
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .button-wrapper {
+        text-align: center;
+    }
+}
+
   
 
 /* ===================================================================
