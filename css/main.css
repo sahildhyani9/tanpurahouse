@@ -2836,7 +2836,7 @@ html.no-csstransitions .home-content__main {
 
 .clients-testimonials .testimonials p {
     font-family: "lora-regular", serif;
-    font-size: 3rem;
+    font-size: 2rem;
     line-height: 1.8;
     color: #555555;
     margin-bottom: 6rem;
@@ -3421,6 +3421,12 @@ html.no-csstransitions .home-content__main {
 
 
 
+
+
+
+
+
+
 /* ===================================================================
  * # footer
  *
@@ -3478,7 +3484,7 @@ footer .row {
     border: none;
     width: 85px;
     height: 28px;
-    background: url("../images/logo-footer.png") no-repeat center;
+    background: url("../images/logo 1.png") no-repeat center;
     background-size: 85px 28px;
     font: 0/0 a;
     text-shadow: none;
@@ -3615,6 +3621,10 @@ footer .row {
 
 .go-top a:hover, .go-top a:focus {
     color: #FFFFFF;
+}
+
+.go-top {
+    display: block !important;
 }
 
 

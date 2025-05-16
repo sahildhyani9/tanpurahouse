@@ -132,6 +132,44 @@
         margin-bottom: 20px;
       }
     }
+   .services-service__buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn--stroke {
+  background-color: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+.btn--stroke:hover {
+  background-color: #fff;
+  color: #01425c;
+}
+
+
+
+
+
+
+
+
+
+
   </style>
 </head>
 <body>
@@ -199,7 +237,24 @@
         <div class="square-img">
             <img src="images/portfolio/tambura-4952939.jpg" alt="Audience" />
           </div>
-      </div>
+      
+
+        <div class="services-service__buttons">
+            <a href="#" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/sahil9dhyani'}); return false;" 
+                class="btn btn--stroke"> Schedule Demo Class </a>        
+             
+                <!-- Calendly link widget begin -->
+                  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                <!-- Calendly link widget end -->
+           <a href="/index.html#contact" class="btn btn--stroke">Contact Us</a>
+          
+        </div>
+
+      
+      
+      
+        </div>
       </div>
     </div>
   </div>
