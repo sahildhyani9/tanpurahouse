@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Residency Page</title>
   <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
       background-color: #f7f7f7;
@@ -25,7 +31,7 @@
       flex: 1;
       min-width: 300px;
       position: relative;
-      height: 600px;
+      height: 650px;
     }
 
     .image-column img {
@@ -34,37 +40,14 @@
       box-shadow: 0 8px 16px rgba(0,0,0,0.15);
       object-fit: cover;
       position: absolute;
-      transition: transform 0.3s;
+      transition: transform 0.3s ease;
     }
 
-    .image-column img:nth-child(1) {
-      top: 0;
-      left: 0;
-      z-index: 1;
-    }
-
-    .image-column img:nth-child(2) {
-      top: 200px;
-      left: 50px;
-      z-index: 2;
-    }
-
-    .image-column img:nth-child(3) {
-      top: 400px;
-      left: 0;
-      z-index: 3;
-    }
-
-    .image-column img:nth-child(4) {
-      top: 600px;
-      left: 50px;
-      z-index: 4;
-    }
-    .image-column img:nth-child(5) {
-      top: 800px;
-      left: 0;
-      z-index: 5;
-    }
+    .image-column img:nth-child(1) { top: 0; left: 0; z-index: 1; }
+    .image-column img:nth-child(2) { top: 180px; left: 50px; z-index: 2; }
+    .image-column img:nth-child(3) { top: 360px; left: 0; z-index: 3; }
+    .image-column img:nth-child(4) { top: 540px; left: 50px; z-index: 4; }
+    .image-column img:nth-child(5) { top: 720px; left: 0; z-index: 5; }
 
     .image-column img:hover {
       transform: scale(1.03);
@@ -78,7 +61,7 @@
       gap: 2rem;
     }
 
-    .card {
+    .card, .fee-card {
       background: #fff;
       border-radius: 1rem;
       box-shadow: 0 8px 20px rgba(0,0,0,0.08);
@@ -88,11 +71,17 @@
     h1 {
       font-family: 'Georgia', serif;
       font-size: 2rem;
-      margin-top: 0;
+      margin-bottom: 1rem;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
     }
 
     ul {
       padding-left: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     ul li::marker {
@@ -103,65 +92,73 @@
       margin-top: 1.5rem;
     }
 
-    .fee-card {
-      font-size: 1rem;
-      background: #fff;
-      border-radius: 1rem;
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
-      padding: 1.5rem 2rem;
+    .btn {
+      display: inline-block;
+      padding: 12px 24px;
+      margin-top: 20px;
+      font-size: 15px;
+      font-weight: bold;
+      border: none;
+      border-radius: 25px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .btn--stroke {
+      background-color: #000;
+      border: 2px solid #fff;
+      color: #fff;
+    }
+
+    .btn--stroke:hover {
+      background-color: #4CAF50;
+      color: #ffffff;
+    }
+
+    .services-service__buttons {
+      margin-top: 20px;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+      .image-column img {
+        width: 100%;
+        left: 0 !important;
+        top: unset !important;
+        position: relative;
+        margin-bottom: 1rem;
+      }
+
+      .image-column {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+      }
     }
 
     @media (max-width: 768px) {
       .container {
         flex-direction: column;
+        padding: 1rem;
       }
-      .image-column {
-        height: 500px;
+
+      .card, .fee-card {
+        padding: 1.5rem;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
       }
     }
-
-   .btn {
-  display: inline-block;
-  padding: 12px 24px;
-  margin: 8px;
-  font-size: 15px;
-  font-weight: bold;
-  border: none;
-  border-radius: 25px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.btn--stroke {
-  background-color:  #000000;
-  border: 2px solid #fff;
-  color: #fff;
-}
-
-.btn--stroke:hover {
-  background-color: #4CAF50;
-  color: #ffffff;
-}
-
-
-
-
-
   </style>
 </head>
 <body>
 
   <div class="container">
-    <!-- Image Section with Overlap -->
-    <div class="image-column">
-      <img src="images/portfolio/IMG_0828.JPG" alt="Classroom Image" />
-      <img src="images/portfolio/IMG_0866.jpg" alt="Instructor Singing" />
-      <img src="images/portfolio/IMG_0869.jpg" alt="Instrument Close-up" />
-      <img src="images/portfolio/IMG_3877.jpg" alt="Instrument Close-up" />
-      <img src="images/portfolio/IMG_3879.jpg" alt="Instrument Close-up" />
-    </div>
-
+    
     <!-- Content Section -->
     <div class="content-column">
       <div class="card">
@@ -172,40 +169,39 @@
           <ul>
             <li>Minimum Stay: 7 days</li>
             <li>Maximum Stay: 30 days</li>
-            <li>You may choose your duration between 7 to 30 days based on your availability and learning goals.</li>
+            <li>Choose your duration based on availability and learning goals.</li>
           </ul>
         </div>
 
         <div class="subsection">
           <h3>✔ Facilities Provided:</h3>
-          <p>We aim to make your stay comfortable and focused on learning. The following amenities are included:</p>
           <ul>
-            <li>A bed with clean bedsheets and pillows</li>
+            <li>Clean bed, bedsheets, and pillows</li>
             <li>Electricity and WiFi</li>
             <li>Study table and chair</li>
-            <li>Dedicated space for daily riyaaz (practice)</li>
+            <li>Dedicated riyaaz (practice) space</li>
           </ul>
         </div>
 
         <div class="subsection">
           <h3>✔ Food Arrangements:</h3>
           <ul>
-            <li>Vegetarian meals will be provided daily.</li>
-            <li>Students preferring non-veg or other food may cook or order for themselves.</li>
-            <li>Children attending the residency will be served cooked food.</li>
-            <li>Adult students are encouraged to use the available kitchen space for simple meals.</li>
+            <li>Daily vegetarian meals</li>
+            <li>Non-veg/cooking self-managed</li>
+            <li>Children get cooked food</li>
+            <li>Adults may use the kitchen for simple meals</li>
           </ul>
         </div>
 
         <div class="subsection">
           <h3>✔ Residency Guidelines:</h3>
           <ul>
-            <li>Wake-up time is 5:00 A.M. followed by guided riyaaz</li>
-            <li>Maintain cleanliness of your room</li>
-            <li>No alcohol consumption allowed</li>
-            <li>Lights out by 9:30 P.M.</li>
-            <li>Daily cleaning participation is encouraged (e.g., mopping, watering plants, dishwashing, etc.)</li>
-            <li>Other activities like yoga, gym are not provided but can be self-arranged</li>
+            <li>Wake-up: 5:00 A.M. + Guided riyaaz</li>
+            <li>Maintain cleanliness</li>
+            <li>No alcohol</li>
+            <li>Lights out: 9:30 P.M.</li>
+            <li>Participate in daily chores</li>
+            <li>Yoga/gym not provided, can be self-managed</li>
           </ul>
         </div>
       </div>
@@ -217,18 +213,26 @@
           <li>30-Day Stay: ₹25,000</li>
           <li>Per Day: ₹1,000</li>
         </ul>
-        <p><strong>Security Deposit:</strong> ₹3,000 (Refundable upon successful completion of stay. Deductions may apply for any damages.)</p>
-      </div>
+        <p><strong>Security Deposit:</strong> ₹3,000 (Refundable upon completion. Deductions may apply.)</p>
 
-
-              <div class="services-service__buttons">
-            
-           <a href="/index.html#contact" class="btn btn--stroke">Contact Us</a>
-          
+        <div class="services-service__buttons">
+          <a href="/index.html#contact" class="btn btn--stroke">Contact Us</a>
         </div>
-
+      </div>
     </div>
+<!-- Image Section -->
+    <div class="image-column">
+      <img src="images/portfolio/IMG_0828.JPG" alt="Classroom Image" />
+      <img src="images/portfolio/IMG_0866.jpg" alt="Instructor Singing" />
+      <img src="images/portfolio/IMG_0869.jpg" alt="Instrument Close-up" />
+      <img src="images/portfolio/IMG_3877.jpg" alt="Instrument Close-up" />
+      <img src="images/portfolio/IMG_3879.jpg" alt="Instrument Close-up" />
+    </div>
+
+
   </div>
+
+  
 
 </body>
 </html>
