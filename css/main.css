@@ -1471,7 +1471,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
  * ------------------------------------------------------------------- */
 .header-nav {
     background: #0C0C0C;
-    color: rgba(255, 255, 255, 0.25);
+    color: rgb(255, 255, 255);
     font-family: "montserrat-light", sans-serif;
     font-size: 1.3rem;
     line-height: 1.846;
@@ -1495,7 +1495,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .header-nav a, .header-nav a:visited {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(253, 253, 253, 0.5);
 }
 
 .header-nav a:hover,
@@ -1558,7 +1558,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 }
 
 .header-nav__social li a {
-    color: rgba(255, 255, 255, 0.15);
+    color: rgb(255, 255, 255);
 }
 
 .header-nav__social li a:hover,
@@ -2287,9 +2287,10 @@ html.no-csstransitions .home-content__main {
 .card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding-left: 90px;
-    padding-right: 90px;
     gap: 30px;
+    max-width: 1024px;
+    margin: 0 auto;
+    padding: 0 20px;
     position: relative;
   }
   
@@ -2436,7 +2437,7 @@ html.no-csstransitions .home-content__main {
 }
 
 .services-service__buttons .btn {
-    width: 215px;
+    width: 200px;
     border-color: #FF2D2D;
     color: #FF2D2D;
     margin: 1.5rem 1.5rem 0 0;
